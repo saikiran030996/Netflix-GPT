@@ -2,6 +2,9 @@
 
     - Create React App
     - Configure TailwindCSS
+    - Header
+    - Login forum
+    - Sign up forum
 
 
 
