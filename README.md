@@ -5,6 +5,19 @@
     - Header
     - Login forum
     - Sign up forum
+    - Form Validations
+    - useRef Hook
+    - Firebase Setup
+    - Deploying our app to production
+    - Create SignUp User Account
+    - Implement Signin User API
+    - Created Reduct Store with userSlice
+    - Implemented Sign out
+    - Update Profile API call
+    - Fetch from TMDB Movies
+    
+    
+
 
 
 
