@@ -3,14 +3,13 @@ import Header from './Header';
 import { checkValidData } from '../utilis/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile} from "firebase/auth";
 import { auth } from '../utilis/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utilis/userSlice';
+import { USER_AVATAR } from '../utilis/constants';
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage,setErrorMessage] = useState(null);
-  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -35,21 +34,19 @@ const Login = () => {
   .then((userCredential) => {
     const user = userCredential.user;
     updateProfile(user, {
-      displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/138405475?u=5d412843f2f3ba782b3d2a76c692b28fee9e74d6&v=4"
+      displayName: name.current.value, photoURL: USER_AVATAR
     }).then(() => {
 
       const {uid, email,displayName,photoURL} = auth;
       dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}))
 
-      navigate("/browser")
     }).catch((error) => {
       // An error occurred
       setErrorMessage(error.message);
       // ...
     });
     
-    console.log(user)
-    navigate("/browse")
+    // console.log(user)
     // ...
   })
   .catch((error) => {
@@ -67,7 +64,6 @@ const Login = () => {
     // Signed in 
     const user = userCredential.user;
 
-    navigate("/browse")
     // ...
   })
   .catch((error) => {
