@@ -4,9 +4,12 @@ export const USER_AVATAR = "https://wallpapers.com/images/hd/netflix-profile-pic
 
 
 export const API_OPTIONS = {
+  
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZWQxOWNiNTc1ODVkMmYyNmQwMzdiYThjZGNmZTgzNCIsInN1YiI6IjY1YmExMzU4ZGE5ZWYyMDE2M2E2NGQ3NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AOqhQRI5LkHj1UaCVb7ruBWW4z0y3HVpYpSEaD3951o'
+      Authorization: 'Bearer ced19cb57585d2f26d037ba8cdcfe834'
     }
   };
+
+  export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";

@@ -28,7 +28,8 @@
     - Update Store with Trailer
     - Embedded the Youtube video and make it auto play and mute
     - Tailwing classes to make it look awesome
-    - 
+    - Build Secondary Component
+    
     
 
 
